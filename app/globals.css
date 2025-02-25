@@ -26,3 +26,11 @@ img {
   width: 40;
   height: 40;
 }
+
+.social-container {
+  @apply relative flex items-center;
+}
+
+.social {
+  @apply absolute left-0 flex h-[40px] max-w-0 -translate-x-0 items-center overflow-hidden whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-black opacity-0 transition-all duration-1000 ease-in-out group-hover:w-auto group-hover:max-w-[250px] group-hover:-translate-x-full group-hover:opacity-100;
+}
