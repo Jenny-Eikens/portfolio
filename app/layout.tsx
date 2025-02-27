@@ -1,4 +1,5 @@
 import './globals.css'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 export const metadata = {
   title: 'My Portfolio',
@@ -20,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-desktop bg-cover bg-center bg-no-repeat">
-        {children}
-      </body>
+      <body className="bg-background">{children}</body>
     </html>
   )
 }

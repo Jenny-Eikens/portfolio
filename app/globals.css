@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,9 +16,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Tajawal', 'Courier Prime', sans-serif;
   font-size: 16px;
   font-weight: 500;
+  letter-spacing: 0.05rem;
   @apply text-primary;
 }
 
@@ -27,10 +28,30 @@ img {
   height: 40;
 }
 
+nav ul li {
+  @apply tracking-widest transition-colors duration-200 hover:text-secondary;
+}
+
+.category-wrapper {
+  @apply bg-skills rounded-xl bg-opacity-90 p-4;
+}
+
+.skill-heading {
+  text-decoration: underline;
+  text-decoration-thickness: 10px;
+  text-underline-offset: -3px;
+  text-decoration-skip-ink: none;
+  @apply decoration-secondary;
+}
+
+.subheading {
+  @apply italic;
+}
+
 .social-container {
   @apply relative flex items-center;
 }
 
 .social {
-  @apply absolute left-0 flex h-[40px] max-w-0 -translate-x-0 items-center overflow-hidden whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-black opacity-0 transition-all duration-1000 ease-in-out group-hover:w-auto group-hover:max-w-[250px] group-hover:-translate-x-full group-hover:opacity-100;
+  @apply absolute left-0 flex h-[40px] max-w-0 -translate-x-0 items-center overflow-hidden whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-black opacity-0 transition-all duration-1000 ease-in-out group-hover:w-auto group-hover:max-w-[450px] group-hover:-translate-x-full group-hover:opacity-100;
 }

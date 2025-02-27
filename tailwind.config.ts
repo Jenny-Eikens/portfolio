@@ -10,10 +10,14 @@ export default {
     extend: {
       colors: {
         primary: '#fefcfb',
-        secondary: '#A30BC1',
+        secondary: '#580cc1',
+        background: '#04042c',
+        skills: '#150c48',
       },
       backgroundImage: {
         desktop: "url('/images/bg-desktop.jpg')",
+        'gradient-heading':
+          'linear-gradient(to right, #1c0bbe, #580cc1, #1c0bbe)',
       },
     },
   },
