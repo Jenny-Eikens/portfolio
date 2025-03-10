@@ -3,7 +3,7 @@ import React from 'react'
 const Sidebar = () => {
   return (
     <>
-      <div className="h-[80px] w-full px-4 py-4 md:fixed md:right-0 md:h-full md:w-[80px] md:py-0">
+      <div className="h-[80px] w-full px-4 py-4 md:fixed md:right-0 md:top-0 md:h-full md:w-[80px] md:py-0">
         <ul className="flex w-full list-none flex-row items-center justify-center space-x-10 md:h-full md:w-auto md:flex-col md:space-x-0 md:space-y-10">
           <li>
             <a

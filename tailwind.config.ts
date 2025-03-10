@@ -12,7 +12,7 @@ export default {
         primary: '#fefcfb',
         secondary: '#580cc1',
         background: '#04042c',
-        skills: '#150c48',
+        skills: '#1a1a46',
       },
       backgroundImage: {
         desktop: "url('/images/bg-desktop.jpg')",

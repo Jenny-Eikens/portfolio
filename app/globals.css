@@ -33,7 +33,7 @@ nav ul li {
 }
 
 .category-wrapper {
-  @apply bg-skills rounded-xl bg-opacity-90 p-4;
+  @apply rounded-xl bg-skills bg-opacity-90 p-4;
 }
 
 .skill-heading {
@@ -54,4 +54,20 @@ nav ul li {
 
 .social {
   @apply absolute left-0 flex h-[40px] max-w-0 -translate-x-0 items-center overflow-hidden whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-black opacity-0 transition-all duration-1000 ease-in-out group-hover:w-auto group-hover:max-w-[450px] group-hover:-translate-x-full group-hover:opacity-100;
+}
+
+.category-wrapper {
+  @apply self-start md:space-y-6;
+}
+
+.skill-list {
+  @apply list-none space-y-3;
+}
+
+.skill-wrapper {
+  @apply flex items-center space-x-3;
+}
+
+.dev-concept {
+  @apply rounded-md bg-white p-1;
 }
