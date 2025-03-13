@@ -18,37 +18,33 @@ const Skills = ({ text = 'My skillset includes...', speed = 100 }) => {
     })
     observer.observe(myRef.current)
 
-    let interval: NodeJS.Timeout
+    return () => observer.disconnect() // Cleanup observer
+  }, []) // Only run once
 
-    if (isVisible) {
-      let currentIndex = 0
-      setDisplayedText('')
+  useEffect(() => {
+    if (!isVisible) return
 
-      interval = setInterval(() => {
-        if (currentIndex >= text.length) {
-          clearInterval(interval)
-          return
-        }
+    setDisplayedText('') // Reset text properly before animation starts
 
+    let currentIndex = 0
+    const interval = setInterval(() => {
+      if (currentIndex < text.length) {
         setDisplayedText((prev) => prev + text[currentIndex])
         currentIndex++
-      }, speed)
-    }
+      }
+    }, speed)
 
-    return () => {
-      observer.disconnect() // Cleanup observer
-      clearInterval(interval) // Cleanup interval
-    }
-  }, [isVisible, text, speed])
+    return () => clearInterval(interval) // Cleanup interval when unmounting
+  }, [isVisible, text, speed]) // Runs when visibility changes
 
   return (
     <>
-      <h2 className="mb-6 text-center text-4xl" ref={myRef}>
+      <h2 className="mb-6 pt-2 text-center text-3xl" ref={myRef}>
         {displayedText}
       </h2>
 
-      <div className="skills-wrapper flex h-full w-full flex-col justify-between space-y-4 border border-blue-500 md:flex-row md:space-y-0">
-        <div className="category-wrapper">
+      <div className="skills-wrapper flex h-full w-full flex-col items-center justify-evenly space-y-4 border-2 border-blue-500 md:flex-row md:items-center md:space-y-0">
+        <div className="category-wrapper outline outline-purple-400">
           <h3 className="skill-heading">Frontend Development</h3>
           <h4 className="subheading">Core Technologies</h4>
           <ul className="skill-list">
@@ -65,8 +61,8 @@ const Skills = ({ text = 'My skillset includes...', speed = 100 }) => {
               <span>JavaScript</span>
             </li>
             <li className="skill-wrapper">
-              <img src="/images/typescript.png" alt="Typescript icon" />
-              <span>Typescript</span>
+              <img src="/images/typescript.png" alt="TypeScript icon" />
+              <span>TypeScript</span>
             </li>
           </ul>
         </div>

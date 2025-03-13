@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Sidebar from './Sidebar'
 import Header from './Header'
 import Skills from './Skills'
+import Projects from './Projects'
 
 const Homepage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -21,15 +22,15 @@ const Homepage = () => {
       <div
         className="relative min-h-screen overflow-x-hidden outline outline-white"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.1), transparent 400px)`,
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.08), transparent 400px)`,
         }}
       >
         <Header />
         <div className="hidden md:block">
           <Sidebar />
         </div>
-        <main className="m-auto w-[90vw] max-w-[1300px] space-y-10 text-3xl md:pr-20">
-          <section className="relative flex h-screen max-w-[1100px] flex-col items-start outline outline-blue-500 md:pl-[4rem]">
+        <main className="m-auto w-[90vw] max-w-[1200px] space-y-10 text-2xl md:pr-20">
+          <section className="relative flex h-screen max-w-[1100px] flex-col items-start md:pl-[4rem]">
             <div className="mb-6 mt-[6rem] md:mt-[8rem]">
               <code className="text-[3rem] font-bold md:text-[6rem]">
                 &lt;&gt;
@@ -42,7 +43,7 @@ const Homepage = () => {
                 &lt;/&gt;
               </code>
             </div>
-            <h2 className="text-[3rem] font-bold leading-[3rem] md:text-[4.5rem]">
+            <h2 className="text-[3rem] font-bold leading-[3rem] md:text-[4rem]">
               Frontend Developer
             </h2>
             {/* <FontAwesomeIcon
@@ -51,8 +52,14 @@ const Homepage = () => {
               beat
             /> */}
           </section>
-          <section className="flex min-h-screen w-full flex-col p-4 outline outline-purple-500 md:h-screen">
+          <section
+            className="flex min-h-screen w-full flex-col outline outline-purple-500 md:h-screen"
+            id="skills"
+          >
             <Skills />
+          </section>
+          <section id="projects">
+            <Projects />
           </section>
         </main>
         <div className="relative md:hidden">

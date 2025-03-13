@@ -9,15 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#fefcfb',
-        secondary: '#580cc1',
-        background: '#04042c',
-        skills: '#1a1a46',
+        primary: '#F0F7F4',
+        secondary: '#70ABAF',
+        background: '#12213F',
+        cards: '#162950',
       },
       backgroundImage: {
         desktop: "url('/images/bg-desktop.jpg')",
         'gradient-heading':
-          'linear-gradient(to right, #1c0bbe, #580cc1, #1c0bbe)',
+          'linear-gradient(to right, #70ABAF, #99E1D9, #70ABAF)',
       },
     },
   },
