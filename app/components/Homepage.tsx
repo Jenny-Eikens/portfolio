@@ -31,7 +31,7 @@ const Homepage = () => {
         </div>
         <main className="m-auto w-[90vw] max-w-[1200px] space-y-10 text-2xl md:pr-20">
           <section className="relative flex h-screen max-w-[1100px] flex-col items-start md:pl-[4rem]">
-            <div className="mb-6 mt-[6rem] md:mt-[8rem]">
+            <div className="mb-6 mt-[6rem] text-center md:mt-[8rem] md:text-left">
               <code className="text-[3rem] font-bold md:text-[6rem]">
                 &lt;&gt;
               </code>{' '}
@@ -53,12 +53,12 @@ const Homepage = () => {
             /> */}
           </section>
           <section
-            className="flex min-h-screen w-full flex-col outline outline-purple-500 md:h-screen"
+            className="flex min-h-screen w-full flex-col md:h-screen"
             id="skills"
           >
             <Skills />
           </section>
-          <section id="projects">
+          <section className="min-h-screen" id="projects">
             <Projects />
           </section>
         </main>

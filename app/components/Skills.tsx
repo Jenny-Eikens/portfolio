@@ -1,52 +1,68 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons'
+import Typewriter from 'typewriter-effect'
 
-const Skills = ({ text = 'My skillset includes...', speed = 100 }) => {
-  const [displayedText, setDisplayedText] = useState('')
-  const [isVisible, setIsVisible] = useState<boolean | undefined>()
-  const myRef = useRef(null)
+const Skills = () => {
+  const [visibleSections, setVisibleSections] = useState({})
+  const [typingDone, setTypingDone] = useState(false)
+  // const [showCursor, setShowCursor] = useState(true)
 
   useEffect(() => {
-    if (!myRef.current) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const sectionId = entry.target.id
+          if (sectionId) {
+            console.log(
+              `Section ${sectionId} is ${entry.isIntersecting ? 'visible' : 'hidden'}`,
+            ) // Debugging
+            setVisibleSections((prev) => ({
+              ...prev,
+              [sectionId]: entry.isIntersecting,
+            }))
+          }
+        })
+      },
+      { threshold: 0 },
+    )
 
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0]
-      setIsVisible(entry.isIntersecting)
-    })
-    observer.observe(myRef.current)
+    const sections = document.querySelectorAll('.observe')
+    sections.forEach((section) => observer.observe(section))
 
     return () => observer.disconnect() // Cleanup observer
   }, []) // Only run once
 
-  useEffect(() => {
-    if (!isVisible) return
-
-    setDisplayedText('') // Reset text properly before animation starts
-
-    let currentIndex = 0
-    const interval = setInterval(() => {
-      if (currentIndex < text.length) {
-        setDisplayedText((prev) => prev + text[currentIndex])
-        currentIndex++
-      }
-    }, speed)
-
-    return () => clearInterval(interval) // Cleanup interval when unmounting
-  }, [isVisible, text, speed]) // Runs when visibility changes
-
   return (
     <>
-      <h2 className="mb-6 pt-2 text-center text-3xl" ref={myRef}>
-        {displayedText}
-      </h2>
+      <div className="observe mb-6 pt-2 text-center text-3xl" id="typewriter">
+        {visibleSections['typewriter'] && (
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString('My skillset includes...')
+                // .callFunction(() => setShowCursor(false))
+                .callFunction(() => setTypingDone(true))
+                .start()
+            }}
+            options={{
+              autoStart: false,
+              loop: false,
+              cursor: '',
+            }}
+          />
+        )}
+      </div>
 
-      <div className="skills-wrapper flex h-full w-full flex-col items-center justify-evenly space-y-4 border-2 border-blue-500 md:flex-row md:items-center md:space-y-0">
-        <div className="category-wrapper outline outline-purple-400">
+      <div className="skills-wrapper flex h-full w-full flex-col items-center justify-evenly space-y-4 md:flex-row md:justify-between md:space-x-4 md:space-y-0">
+        <div
+          className={`category-wrapper observe ${visibleSections['frontend'] && typingDone ? 'show' : 'hide'}`}
+          id="frontend"
+        >
           <h3 className="skill-heading">Frontend Development</h3>
-          <h4 className="subheading">Core Technologies</h4>
+          <h4 className="skill-subheading">Core Technologies</h4>
           <ul className="skill-list">
             <li className="skill-wrapper">
               <img src="/images/html.png" alt="HTML icon" />
@@ -67,9 +83,12 @@ const Skills = ({ text = 'My skillset includes...', speed = 100 }) => {
           </ul>
         </div>
 
-        <div className="category-wrapper">
+        <div
+          className={`category-wrapper observe ${visibleSections['frameworks'] && typingDone ? 'show' : 'hide'}`}
+          id="frameworks"
+        >
           <h3 className="skill-heading">Frameworks & Libraries</h3>
-          <h4 className="subheading">Styling & UI</h4>
+          <h4 className="skill-subheading">Styling & UI</h4>
           <ul className="skill-list">
             <li className="skill-wrapper">
               <img src="/images/tailwind.png" alt="TailwindCSS icon" />
@@ -84,7 +103,7 @@ const Skills = ({ text = 'My skillset includes...', speed = 100 }) => {
               <span>DaisyUI</span>
             </li>
           </ul>
-          <h4 className="subheading mt-6">JavaScript Frameworks</h4>
+          <h4 className="skill-subheading mt-6">JavaScript Frameworks</h4>
           <ul className="skill-list">
             <li className="skill-wrapper">
               <img src="/images/atom.png" alt="React icon" />
@@ -101,9 +120,12 @@ const Skills = ({ text = 'My skillset includes...', speed = 100 }) => {
           </ul>
         </div>
 
-        <div className="category-wrapper">
+        <div
+          className={`category-wrapper observe ${visibleSections['essentials'] && typingDone ? 'show' : 'hide'}`}
+          id="essentials"
+        >
           <h3 className="skill-heading">Other Essential Skills</h3>
-          <h4 className="subheading">Web Development Concepts</h4>
+          <h4 className="skill-subheading">Web Development Concepts</h4>
           <ul className="skill-list">
             <li className="skill-wrapper">
               <img

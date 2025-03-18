@@ -23,18 +23,42 @@ body {
   @apply text-primary;
 }
 
+nav ul li {
+  @apply tracking-widest transition-colors duration-200 hover:text-secondary;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+.skills-wrapper .hide {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s ease-out;
+}
+
+.skills-wrapper .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s ease-out;
+}
+
+.category-wrapper:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.category-wrapper:nth-child(3) {
+  transition-delay: 400ms;
+}
+
 .skill-wrapper img,
 .social-container img {
   width: 40;
   height: 40;
 }
 
-nav ul li {
-  @apply tracking-widest transition-colors duration-200 hover:text-secondary;
-}
-
 .category-wrapper {
-  @apply bg-cards rounded-xl bg-opacity-90 p-4;
+  @apply space-y-6 rounded-xl bg-cards bg-opacity-90 p-4;
 }
 
 .skill-heading {
@@ -42,12 +66,22 @@ nav ul li {
   text-decoration-thickness: 10px;
   text-underline-offset: -3px;
   text-decoration-skip-ink: none;
-  @apply decoration-secondary;
+  @apply text-3xl decoration-secondary;
 }
 
-.subheading {
+.skill-subheading {
   @apply italic;
 }
+
+.skill-list {
+  @apply list-none space-y-3;
+}
+
+.skill-wrapper {
+  @apply flex items-center space-x-3;
+}
+
+/* ------------------------------------------------------------------------------- */
 
 .social-container {
   @apply relative flex items-center;
@@ -57,24 +91,8 @@ nav ul li {
   @apply absolute left-0 flex h-[40px] max-w-0 origin-right transform items-center overflow-hidden whitespace-nowrap rounded bg-primary px-2 py-1 text-sm text-black opacity-0 transition-all duration-1000 ease-in-out group-hover:w-auto group-hover:max-w-[450px] group-hover:-translate-x-full group-hover:opacity-100;
 }
 
-.category-wrapper {
-  @apply space-y-6 self-start;
-}
-
-.skill-heading {
-  @apply text-3xl;
-}
-
-.skill-list {
-  @apply list-none space-y-3;
-}
-
 .list-heading {
   @apply underline decoration-secondary decoration-[3px];
-}
-
-.skill-wrapper {
-  @apply flex items-center space-x-3;
 }
 
 .dev-concept {
@@ -88,7 +106,7 @@ nav ul li {
 }
 
 .preview-card {
-  @apply bg-cards h-full space-y-4 rounded-md bg-opacity-50 p-4 transition-all duration-300 ease-in-out hover:bg-opacity-100;
+  @apply h-full space-y-4 rounded-md bg-cards bg-opacity-40 p-4 transition-all duration-300 ease-in-out hover:bg-opacity-100;
 }
 
 .preview-title {

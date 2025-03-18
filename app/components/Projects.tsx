@@ -4,9 +4,12 @@ const Projects = () => {
   return (
     <>
       <h2 className="mb-6 pt-2 text-center text-3xl">My projects</h2>
-      <div className="projects-wrapper w-full">
+      <div className="projects-wrapper w-full space-y-2 md:space-y-0">
         <div className="group">
-          <a href="https://jenny-eikens.github.io/contact-form/">
+          <a
+            href="https://jenny-eikens.github.io/contact-form/"
+            target="_blank"
+          >
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">
                 Contact Form
@@ -34,7 +37,10 @@ const Projects = () => {
         </div>
 
         <div className="group">
-          <a href="https://ip-address-tracker-three-kohl.vercel.app/">
+          <a
+            href="https://ip-address-tracker-three-kohl.vercel.app/"
+            target="_blank"
+          >
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">
                 IP Address Tracker
@@ -61,7 +67,10 @@ const Projects = () => {
         </div>
 
         <div className="group">
-          <a href="https://jenny-eikens.github.io/e-commerce-page/">
+          <a
+            href="https://jenny-eikens.github.io/e-commerce-page/"
+            target="_blank"
+          >
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">
                 E-Commerce Product Page
@@ -89,7 +98,7 @@ const Projects = () => {
         </div>
 
         <div className="group">
-          <a href="https://todo-app-gray-nine-49.vercel.app/">
+          <a href="https://todo-app-gray-nine-49.vercel.app/" target="_blank">
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">
                 Todo App
@@ -117,7 +126,7 @@ const Projects = () => {
         </div>
 
         <div className="group">
-          <a href="https://job-listings-iota-peach.vercel.app/">
+          <a href="https://job-listings-iota-peach.vercel.app/" target="_blank">
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">
                 Job Listings
@@ -144,7 +153,7 @@ const Projects = () => {
         </div>
 
         <div className="group">
-          <a href="https://comment-section-kohl.vercel.app/">
+          <a href="https://comment-section-kohl.vercel.app/" target="_blank">
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">
                 Interactive Comment Section
