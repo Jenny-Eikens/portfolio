@@ -6,7 +6,9 @@ import { faBootstrap } from '@fortawesome/free-brands-svg-icons'
 import Typewriter from 'typewriter-effect'
 
 const Skills = () => {
-  const [visibleSections, setVisibleSections] = useState({})
+  const [visibleSections, setVisibleSections] = useState<
+    Record<string, boolean>
+  >({})
   const [typingDone, setTypingDone] = useState(false)
   // const [showCursor, setShowCursor] = useState(true)
 
@@ -23,6 +25,9 @@ const Skills = () => {
               ...prev,
               [sectionId]: entry.isIntersecting,
             }))
+            if (sectionId === 'typewriter' && entry.isIntersecting) {
+              observer.unobserve(entry.target)
+            }
           }
         })
       },
@@ -51,6 +56,7 @@ const Skills = () => {
               autoStart: false,
               loop: false,
               cursor: '',
+              delay: 80,
             }}
           />
         )}

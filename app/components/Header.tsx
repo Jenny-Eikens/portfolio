@@ -5,6 +5,25 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const navItems = [
+    {
+      target: '',
+      title: '// home',
+    },
+    {
+      target: 'skills',
+      title: '// skills',
+    },
+    {
+      target: 'projects',
+      title: '// projects',
+    },
+    {
+      target: 'contact',
+      title: '// contact',
+    },
+  ]
+
   return (
     <>
       <header className="relative w-full pt-2">
@@ -24,18 +43,11 @@ const Header = () => {
             className={`fixed left-0 top-0 z-40 flex h-full w-full flex-col bg-secondary pl-[0.5rem] transition-transform duration-300 md:pl-0 ${menuOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:left-auto md:top-auto md:mx-auto md:max-w-[600px] md:translate-x-0 md:flex-row md:bg-transparent`}
           >
             <ul className="mt-[6rem] list-none justify-between space-y-10 p-3 text-3xl md:mt-0 md:flex md:w-full md:flex-row md:space-y-0 md:text-2xl">
-              <li>
-                <a href="#">// home</a>
-              </li>
-              <li>
-                <a href="#skills">// skills</a>
-              </li>
-              <li>
-                <a href="#projects">// projects</a>
-              </li>
-              <li>
-                <a href="#">// contact</a>
-              </li>
+              {navItems.map((item, index) => (
+                <li key={index} onClick={() => setMenuOpen(false)}>
+                  <a href={`#${item.target}`}>{item.title}</a>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

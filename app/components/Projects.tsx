@@ -3,7 +3,7 @@ import React from 'react'
 const Projects = () => {
   return (
     <>
-      <h2 className="mb-6 pt-2 text-center text-3xl">My projects</h2>
+      <h2 className="mb-6 pt-2 text-center text-3xl md:mb-8">My projects</h2>
       <div className="projects-wrapper w-full space-y-2 md:space-y-0">
         <div className="group">
           <a

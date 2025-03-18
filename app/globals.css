@@ -81,6 +81,16 @@ nav ul li {
   @apply flex items-center space-x-3;
 }
 
+hr {
+  background: linear-gradient(
+    to right,
+    rgba(240, 247, 244, 0),
+    rgba(240, 247, 244, 1) 40%,
+    rgba(240, 247, 244, 1) 60%,
+    rgba(240, 247, 244, 0)
+  );
+}
+
 /* ------------------------------------------------------------------------------- */
 
 .social-container {
@@ -90,6 +100,8 @@ nav ul li {
 .social {
   @apply absolute left-0 flex h-[40px] max-w-0 origin-right transform items-center overflow-hidden whitespace-nowrap rounded bg-primary px-2 py-1 text-sm text-black opacity-0 transition-all duration-1000 ease-in-out group-hover:w-auto group-hover:max-w-[450px] group-hover:-translate-x-full group-hover:opacity-100;
 }
+
+/* ------------------------------------------------------------------------------- */
 
 .list-heading {
   @apply underline decoration-secondary decoration-[3px];
@@ -103,6 +115,18 @@ nav ul li {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.group {
+  @apply transition-opacity duration-200;
+}
+
+.projects-wrapper:hover .group {
+  opacity: 0.3; /* Reduce opacity of all siblings when hovering over any */
+}
+
+.projects-wrapper .group:hover {
+  opacity: 1; /* Keep the hovered one at full opacity */
 }
 
 .preview-card {
@@ -119,4 +143,17 @@ nav ul li {
 
 .projects-list {
   @apply list-none space-y-2;
+}
+
+footer a {
+  display: block;
+}
+
+@media (prefers-reduced-motion) {
+  .hide {
+    transition: none;
+  }
+  .show {
+    transition: none;
+  }
 }

@@ -4,6 +4,8 @@ import Sidebar from './Sidebar'
 import Header from './Header'
 import Skills from './Skills'
 import Projects from './Projects'
+import Contact from './Contact'
+import Typewriter from 'typewriter-effect'
 
 const Homepage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -44,22 +46,30 @@ const Homepage = () => {
               </code>
             </div>
             <h2 className="text-[3rem] font-bold leading-[3rem] md:text-[4rem]">
-              Frontend Developer
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter.typeString('Frontend Developer').start()
+                }}
+                options={{
+                  autoStart: true,
+                  loop: false,
+                }}
+              />
             </h2>
-            {/* <FontAwesomeIcon
-              icon={faArrowDown}
-              className="m-auto h-[3rem] w-[3rem] self-end"
-              beat
-            /> */}
           </section>
           <section
             className="flex min-h-screen w-full flex-col md:h-screen"
             id="skills"
           >
             <Skills />
+            <hr className="mt-[3rem] h-[1px] border-0" />
           </section>
           <section className="min-h-screen" id="projects">
             <Projects />
+            <hr className="mt-[3rem] h-[1px] border-0" />
+          </section>
+          <section id="contact" className="outline outline-blue-700">
+            <Contact />
           </section>
         </main>
         <div className="relative md:hidden">

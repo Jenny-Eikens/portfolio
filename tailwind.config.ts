@@ -9,10 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#F0F7F4',
-        secondary: '#70ABAF',
-        background: '#12213F',
-        cards: '#162950',
+        primary: 'rgba(240, 247, 244, 1)',
+        secondary: 'rgba(112, 171, 175, 1)',
+        background: 'rgba(18, 33, 63, 1)',
+        cards: 'rgba(22, 41, 80, 1)',
       },
       backgroundImage: {
         desktop: "url('/images/bg-desktop.jpg')",

@@ -5,7 +5,6 @@ import Homepage from './components/Homepage'
   - fix sidebar disappearing
   - find better solution for hover effect on socials
   - fix background effect not working across whole page
-  - fix intersection observer
   */
 }
 
