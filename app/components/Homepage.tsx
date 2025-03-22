@@ -11,20 +11,23 @@ const Homepage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
+      console.log(mousePosition)
     }
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+  }, [mousePosition])
 
   return (
     <>
       <div
-        className="relative min-h-screen overflow-x-hidden outline outline-white"
+        className="h-auto min-h-screen overflow-x-hidden border-4 border-red-400"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.08), transparent 400px)`,
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y + window.scrollY}px, rgba(255, 255, 255, 0.08), transparent 400px)`,
         }}
       >
         <Header />
@@ -32,7 +35,7 @@ const Homepage = () => {
           <Sidebar />
         </div>
         <main className="m-auto w-[90vw] max-w-[1200px] space-y-10 text-2xl md:pr-20">
-          <section className="relative flex h-screen max-w-[1100px] flex-col items-start md:pl-[4rem]">
+          <section className="flex h-screen max-w-[1100px] flex-col items-start md:pl-[4rem]">
             <div className="mb-6 mt-[6rem] text-center md:mt-[8rem] md:text-left">
               <code className="text-[3rem] font-bold md:text-[6rem]">
                 &lt;&gt;
@@ -57,6 +60,7 @@ const Homepage = () => {
               />
             </h2>
           </section>
+
           <section
             className="flex min-h-screen w-full flex-col md:h-screen"
             id="skills"
@@ -64,17 +68,21 @@ const Homepage = () => {
             <Skills />
             <hr className="mt-[3rem] h-[1px] border-0" />
           </section>
+
           <section className="min-h-screen" id="projects">
             <Projects />
             <hr className="mt-[3rem] h-[1px] border-0" />
           </section>
+
           <section id="contact" className="outline outline-blue-700">
             <Contact />
           </section>
+
+          <div className="relative md:hidden">
+            <Sidebar />
+          </div>
         </main>
-        <div className="relative md:hidden">
-          <Sidebar />
-        </div>
+
         <footer className="bottom-1 mt-6 p-2 text-center text-sm md:bottom-0 md:p-0">
           <a href="https://www.flaticon.com/free-icons/html" title="html icons">
             Html icons created by Freepik - Flaticon

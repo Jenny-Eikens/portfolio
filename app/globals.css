@@ -20,7 +20,7 @@ body {
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.05rem;
-  @apply text-primary;
+  @apply bg-background text-primary;
 }
 
 nav ul li {

@@ -18,9 +18,9 @@ const Skills = () => {
         entries.forEach((entry) => {
           const sectionId = entry.target.id
           if (sectionId) {
-            console.log(
-              `Section ${sectionId} is ${entry.isIntersecting ? 'visible' : 'hidden'}`,
-            ) // Debugging
+            // console.log(
+            //   `Section ${sectionId} is ${entry.isIntersecting ? 'visible' : 'hidden'}`,
+            // ) // Debugging
             setVisibleSections((prev) => ({
               ...prev,
               [sectionId]: entry.isIntersecting,
