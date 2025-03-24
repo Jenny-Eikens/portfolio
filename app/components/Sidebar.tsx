@@ -12,9 +12,7 @@ const Sidebar = () => {
               rel="noreferrer noopener"
             >
               <div className="social-container group">
-                <span className="social hidden md:inline">
-                  Check out my Github profile!
-                </span>
+                <span className="social">Check out my Github profile!</span>
                 <img
                   src="/images/GitHub_Invertocat_Light.png"
                   alt="Github logo"

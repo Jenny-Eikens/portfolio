@@ -26,12 +26,12 @@ const Header = () => {
 
   return (
     <>
-      <header className="relative w-full pt-2">
+      <header className="absolute h-[5rem] w-full pt-2">
         <div className="flex flex-col items-start">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            className="relative left-2 top-0 z-50 p-3 md:hidden" // z-index ensures button isn't hidden under overlay
+            className="relative left-2 top-0 z-50 p-3 md:hidden"
           >
             {menuOpen ? (
               <XMarkIcon className="h-10 w-10" />

@@ -5,7 +5,7 @@ import Header from './Header'
 import Skills from './Skills'
 import Projects from './Projects'
 import Contact from './Contact'
-import Typewriter from 'typewriter-effect'
+import Start from './Start'
 
 const Homepage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -25,9 +25,9 @@ const Homepage = () => {
   return (
     <>
       <div
-        className="h-auto min-h-screen overflow-x-hidden border-4 border-red-400"
+        className="h-auto min-h-screen overflow-x-hidden"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y + window.scrollY}px, rgba(255, 255, 255, 0.08), transparent 400px)`,
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y + window.scrollY}px, rgba(255, 255, 255, 0.05), transparent 400px)`,
         }}
       >
         <Header />
@@ -35,108 +35,65 @@ const Homepage = () => {
           <Sidebar />
         </div>
         <main className="m-auto w-[90vw] max-w-[1200px] space-y-10 text-2xl md:pr-20">
-          <section className="flex h-screen max-w-[1100px] flex-col items-start md:pl-[4rem]">
-            <div className="mb-6 mt-[6rem] text-center md:mt-[8rem] md:text-left">
-              <code className="text-[3rem] font-bold md:text-[6rem]">
-                &lt;&gt;
-              </code>{' '}
-              <h1 className="inline text-clip bg-gradient-heading bg-clip-text text-[4.5rem] font-bold leading-[5rem] text-transparent md:text-[8rem] md:leading-[7rem]">
-                Jennifer <br />
-                Eikens
-              </h1>{' '}
-              <code className="text-[3rem] font-bold md:text-[6rem]">
-                &lt;/&gt;
-              </code>
-            </div>
-            <h2 className="text-[3rem] font-bold leading-[3rem] md:text-[4rem]">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter.typeString('Frontend Developer').start()
-                }}
-                options={{
-                  autoStart: true,
-                  loop: false,
-                }}
-              />
-            </h2>
+          <section className="flex h-screen flex-col items-start justify-center md:pl-[4rem]">
+            <Start />
           </section>
+          <hr className="w-full" />
 
           <section
             className="flex min-h-screen w-full flex-col md:h-screen"
             id="skills"
           >
             <Skills />
-            <hr className="mt-[3rem] h-[1px] border-0" />
+            <hr />
           </section>
 
           <section className="min-h-screen" id="projects">
             <Projects />
-            <hr className="mt-[3rem] h-[1px] border-0" />
+            <hr />
           </section>
 
-          <section id="contact" className="outline outline-blue-700">
+          <section id="contact" className="h-auto min-h-[35vh]">
             <Contact />
           </section>
-
-          <div className="relative md:hidden">
-            <Sidebar />
-          </div>
         </main>
 
-        <footer className="bottom-1 mt-6 p-2 text-center text-sm md:bottom-0 md:p-0">
-          <a href="https://www.flaticon.com/free-icons/html" title="html icons">
-            Html icons created by Freepik - Flaticon
-          </a>
-          <a href="https://www.flaticon.com/free-icons/css" title="css icons">
-            Css icons created by Pixel perfect - Flaticon
-          </a>
-          <a
-            href="https://www.flaticon.com/free-icons/javascript"
-            title="javascript icons"
-          >
-            Javascript icons created by Freepik - Flaticon
-          </a>
-          <a
-            href="https://www.flaticon.com/free-icons/typescript"
-            title="typescript icons"
-          >
-            Typescript icons created by Freepik - Flaticon
-          </a>
-          <a href="https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg">
-            Tailwind CSS
-          </a>
-          ,{' '}
-          <a href="https://creativecommons.org/licenses/by-sa/4.0">
-            CC BY-SA 4.0
-          </a>
-          , via Wikimedia Commons
-          <a
-            href="https://www.flaticon.com/free-icons/react"
-            title="react icons"
-          >
-            React icons created by Freepik - Flaticon
-          </a>
-          <a
-            href="https://www.flaticon.com/free-icons/tablet"
-            title="tablet icons"
-          >
-            Tablet icons created by smalllikeart - Flaticon
-          </a>
-          <a
-            href="https://www.flaticon.com/free-icons/validation"
-            title="validation icons"
-          >
-            Validation icons created by lutfix - Flaticon
-          </a>
-          <a
-            href="https://www.flaticon.com/free-icons/accessibility"
-            title="accessibility icons"
-          >
-            Accessibility icons created by juicy_fish - Flaticon
-          </a>
-          <a href="https://www.flaticon.com/free-icons/api" title="api icons">
-            Api icons created by Candy Design - Flaticon
-          </a>
+        <footer className="bottom-1 mt-6 flex flex-col items-center p-2 text-sm md:bottom-0">
+          <h3 className="underline">Credits</h3>
+          <div className="text-left">
+            <a href="https://www.flaticon.com/icons" title="icons">
+              Icons created by Freepik - Flaticon
+            </a>
+            <a href="https://www.flaticon.com/free-icons/css" title="css icons">
+              Css icons created by Pixel perfect - Flaticon
+            </a>
+
+            <a href="https://creativecommons.org/licenses/by-sa/4.0">
+              <span>Tailwind CSS, CC BY-SA 4.0, via Wikimedia Commons </span>
+            </a>
+
+            <a
+              href="https://www.flaticon.com/free-icons/tablet"
+              title="tablet icons"
+            >
+              Tablet icons created by smalllikeart - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/validation"
+              title="validation icons"
+            >
+              Validation icons created by lutfix - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/accessibility"
+              title="accessibility icons"
+            >
+              Accessibility icons created by juicy_fish - Flaticon
+            </a>
+            <a href="https://www.flaticon.com/free-icons/api" title="api icons">
+              Api icons created by Candy Design - Flaticon
+            </a>
+          </div>
         </footer>
       </div>
     </>

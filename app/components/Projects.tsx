@@ -3,9 +3,11 @@ import React from 'react'
 const Projects = () => {
   return (
     <>
-      <h2 className="mb-6 pt-2 text-center text-3xl md:mb-8">My projects</h2>
+      <h2 className="mb-6 pt-2 text-center text-3xl md:mb-10">
+        Here&apos;s a look at some of my projects so far:
+      </h2>
       <div className="projects-wrapper w-full space-y-2 md:space-y-0">
-        <div className="group">
+        <div className="project-wrapper group">
           <a
             href="https://jenny-eikens.github.io/contact-form/"
             target="_blank"
@@ -36,7 +38,7 @@ const Projects = () => {
           </a>
         </div>
 
-        <div className="group">
+        <div className="project-wrapper group">
           <a
             href="https://ip-address-tracker-three-kohl.vercel.app/"
             target="_blank"
@@ -66,7 +68,7 @@ const Projects = () => {
           </a>
         </div>
 
-        <div className="group">
+        <div className="project-wrapper group">
           <a
             href="https://jenny-eikens.github.io/e-commerce-page/"
             target="_blank"
@@ -97,7 +99,7 @@ const Projects = () => {
           </a>
         </div>
 
-        <div className="group">
+        <div className="project-wrapper group">
           <a href="https://todo-app-gray-nine-49.vercel.app/" target="_blank">
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">
@@ -125,7 +127,7 @@ const Projects = () => {
           </a>
         </div>
 
-        <div className="group">
+        <div className="project-wrapper group">
           <a href="https://job-listings-iota-peach.vercel.app/" target="_blank">
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">
@@ -152,7 +154,7 @@ const Projects = () => {
           </a>
         </div>
 
-        <div className="group">
+        <div className="project-wrapper group">
           <a href="https://comment-section-kohl.vercel.app/" target="_blank">
             <div className="preview-card">
               <h3 className="preview-title group-hover:text-secondary">

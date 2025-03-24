@@ -10,7 +10,6 @@ const Skills = () => {
     Record<string, boolean>
   >({})
   const [typingDone, setTypingDone] = useState(false)
-  // const [showCursor, setShowCursor] = useState(true)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,9 +17,6 @@ const Skills = () => {
         entries.forEach((entry) => {
           const sectionId = entry.target.id
           if (sectionId) {
-            // console.log(
-            //   `Section ${sectionId} is ${entry.isIntersecting ? 'visible' : 'hidden'}`,
-            // ) // Debugging
             setVisibleSections((prev) => ({
               ...prev,
               [sectionId]: entry.isIntersecting,
@@ -38,7 +34,7 @@ const Skills = () => {
     sections.forEach((section) => observer.observe(section))
 
     return () => observer.disconnect() // Cleanup observer
-  }, []) // Only run once
+  }, [])
 
   return (
     <>
@@ -48,7 +44,6 @@ const Skills = () => {
             onInit={(typewriter) => {
               typewriter
                 .typeString('My skillset includes...')
-                // .callFunction(() => setShowCursor(false))
                 .callFunction(() => setTypingDone(true))
                 .start()
             }}
@@ -64,25 +59,25 @@ const Skills = () => {
 
       <div className="skills-wrapper flex h-full w-full flex-col items-center justify-evenly space-y-4 md:flex-row md:justify-between md:space-x-4 md:space-y-0">
         <div
-          className={`category-wrapper observe ${visibleSections['frontend'] && typingDone ? 'show' : 'hide'}`}
+          className={`skill-category-wrapper observe ${visibleSections['frontend'] && typingDone ? 'show' : 'hide'}`}
           id="frontend"
         >
           <h3 className="skill-heading">Frontend Development</h3>
           <h4 className="skill-subheading">Core Technologies</h4>
           <ul className="skill-list">
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img src="/images/html.png" alt="HTML icon" />
               <span>HTML</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img src="/images/css-3.png" alt="CSS icon" />
               <span>CSS</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img src="/images/js.png" alt="JavaScript icon" />
               <span>JavaScript</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img src="/images/typescript.png" alt="TypeScript icon" />
               <span>TypeScript</span>
             </li>
@@ -90,32 +85,32 @@ const Skills = () => {
         </div>
 
         <div
-          className={`category-wrapper observe ${visibleSections['frameworks'] && typingDone ? 'show' : 'hide'}`}
+          className={`skill-category-wrapper observe ${visibleSections['frameworks'] && typingDone ? 'show' : 'hide'}`}
           id="frameworks"
         >
           <h3 className="skill-heading">Frameworks & Libraries</h3>
           <h4 className="skill-subheading">Styling & UI</h4>
           <ul className="skill-list">
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img src="/images/tailwind.png" alt="TailwindCSS icon" />
               <span>TailwindCSS</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <FontAwesomeIcon icon={faBootstrap} />
               <span>Bootstrap</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img src="/images/daisyui.png" alt="DaisyUI icon" />
               <span>DaisyUI</span>
             </li>
           </ul>
           <h4 className="skill-subheading mt-6">JavaScript Frameworks</h4>
           <ul className="skill-list">
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img src="/images/atom.png" alt="React icon" />
               <span>React</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img
                 src="/images/next-js.svg"
                 alt="Next.js icon"
@@ -127,13 +122,13 @@ const Skills = () => {
         </div>
 
         <div
-          className={`category-wrapper observe ${visibleSections['essentials'] && typingDone ? 'show' : 'hide'}`}
+          className={`skill-category-wrapper observe ${visibleSections['essentials'] && typingDone ? 'show' : 'hide'}`}
           id="essentials"
         >
           <h3 className="skill-heading">Other Essential Skills</h3>
           <h4 className="skill-subheading">Web Development Concepts</h4>
           <ul className="skill-list">
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img
                 src="/images/responsive.png"
                 alt="Responsiveness icon"
@@ -141,7 +136,7 @@ const Skills = () => {
               />
               <span>Responsive Design</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img
                 src="/images/approval.png"
                 alt="Form validation icon"
@@ -149,7 +144,7 @@ const Skills = () => {
               />
               <span>Form Validation</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img
                 src="/images/accessibility.png"
                 alt="Accessibility icon"
@@ -157,7 +152,7 @@ const Skills = () => {
               />
               <span>Accessibility</span>
             </li>
-            <li className="skill-wrapper">
+            <li className="skill-name-wrapper">
               <img
                 src="/images/cloud-api.png"
                 alt="API icon"
