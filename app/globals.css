@@ -175,11 +175,11 @@ nav ul li {
 /* ------------------------------------------------------------------------------- */
 
 footer {
-  @apply bg-primary text-background;
+  @apply flex space-x-4 bg-primary text-background;
 }
 
 footer a {
-  @apply block text-xs;
+  @apply text-xs;
 }
 
 @media (prefers-reduced-motion) {

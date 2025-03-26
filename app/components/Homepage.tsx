@@ -63,36 +63,38 @@ const Homepage = () => {
 
         <footer className="bottom-1 mt-6 flex flex-col items-center p-2 text-sm md:bottom-0">
           <h3 className="underline">Credits</h3>
-          <div className="text-left">
+          <div className="w-full p-2 text-left md:w-[65%] md:p-0">
             <a href="https://www.flaticon.com/icons" title="icons">
-              Icons created by Freepik - Flaticon
+              Icons created by Freepik - Flaticon <span> | </span>
             </a>
             <a href="https://www.flaticon.com/free-icons/css" title="css icons">
-              Css icons created by Pixel perfect - Flaticon
+              Css icons created by Pixel perfect - Flaticon <span> | </span>
             </a>
-
             <a href="https://creativecommons.org/licenses/by-sa/4.0">
-              <span>Tailwind CSS, CC BY-SA 4.0, via Wikimedia Commons </span>
+              <span>Tailwind CSS, CC BY-SA 4.0, via Wikimedia Commons </span>{' '}
+              <span> | </span>
             </a>
-
             <a
               href="https://www.flaticon.com/free-icons/tablet"
               title="tablet icons"
             >
               Tablet icons created by smalllikeart - Flaticon
-            </a>
+            </a>{' '}
+            <span> | </span>
             <a
               href="https://www.flaticon.com/free-icons/validation"
               title="validation icons"
             >
               Validation icons created by lutfix - Flaticon
-            </a>
+            </a>{' '}
+            <span> | </span>
             <a
               href="https://www.flaticon.com/free-icons/accessibility"
               title="accessibility icons"
             >
               Accessibility icons created by juicy_fish - Flaticon
-            </a>
+            </a>{' '}
+            <span> | </span>
             <a href="https://www.flaticon.com/free-icons/api" title="api icons">
               Api icons created by Candy Design - Flaticon
             </a>
