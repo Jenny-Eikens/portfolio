@@ -39,7 +39,7 @@ I am a self-taught developer with a passion for building clean, responsive websi
 
 - Responsive design
 - Animations
-- Typewriter effects
+- Typewriter effect
 - Keyboard-accessibility
 - SEO optimization
 
