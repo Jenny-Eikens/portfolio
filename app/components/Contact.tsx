@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <>
       <h2 className="mb-10 text-center text-3xl">Let&apos;s get in touch!</h2>
-      <div className="mb-10 flex h-full flex-col space-y-8 px-5 md:mb-0 md:flex-row md:justify-evenly md:space-y-0 md:px-0 md:py-8">
+      <div className="mx-auto mb-10 flex h-full w-[80%] flex-col space-y-8 px-5 md:mb-0 md:w-full md:flex-row md:justify-evenly md:space-y-0 md:px-0 md:py-8">
         <div className="contact-container">
           <a
             href="https://github.com/Jenny-Eikens"

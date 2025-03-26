@@ -3,63 +3,44 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons'
-import Typewriter from 'typewriter-effect'
 
 const Skills = () => {
   const [visibleSections, setVisibleSections] = useState<
     Record<string, boolean>
   >({})
-  const [typingDone, setTypingDone] = useState(false)
+
+  const updateVisibility = (entries: IntersectionObserverEntry[]) => {
+    const updates = entries.reduce(
+      (acc: Record<string, boolean>, entry: IntersectionObserverEntry) => {
+        const sectionId = entry.target.id
+        if (sectionId) {
+          acc[sectionId] = entry.isIntersecting
+        }
+        return acc
+      },
+      {},
+    )
+    setVisibleSections((prev) => ({ ...prev, ...updates }))
+  }
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const sectionId = entry.target.id
-          if (sectionId) {
-            setVisibleSections((prev) => ({
-              ...prev,
-              [sectionId]: entry.isIntersecting,
-            }))
-            if (sectionId === 'typewriter' && entry.isIntersecting) {
-              observer.unobserve(entry.target)
-            }
-          }
-        })
-      },
-      { threshold: 0 },
-    )
+    const observer = new IntersectionObserver(updateVisibility, {
+      threshold: 0.05,
+    })
 
     const sections = document.querySelectorAll('.observe')
     sections.forEach((section) => observer.observe(section))
 
-    return () => observer.disconnect() // Cleanup observer
+    return () => observer.disconnect()
   }, [])
 
   return (
     <>
-      <div className="observe mb-6 pt-2 text-center text-3xl" id="typewriter">
-        {visibleSections['typewriter'] && (
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .typeString('My skills include...')
-                .callFunction(() => setTypingDone(true))
-                .start()
-            }}
-            options={{
-              autoStart: false,
-              loop: false,
-              cursor: '',
-              delay: 80,
-            }}
-          />
-        )}
-      </div>
+      <h2 className="mb-6 pt-2 text-center text-3xl">My skills include:</h2>
 
       <div className="skills-wrapper flex h-full w-full flex-col items-center justify-evenly space-y-4 md:flex-row md:justify-between md:space-x-4 md:space-y-0">
         <div
-          className={`skill-category-wrapper observe ${visibleSections['frontend'] && typingDone ? 'show' : 'hide'}`}
+          className={`skill-category-wrapper observe ${visibleSections['frontend'] ? 'show' : 'hide'}`}
           id="frontend"
         >
           <h3 className="skill-heading">Frontend Development</h3>
@@ -85,7 +66,7 @@ const Skills = () => {
         </div>
 
         <div
-          className={`skill-category-wrapper observe ${visibleSections['frameworks'] && typingDone ? 'show' : 'hide'}`}
+          className={`skill-category-wrapper observe ${visibleSections['frameworks'] ? 'show' : 'hide'}`}
           id="frameworks"
         >
           <h3 className="skill-heading">Frameworks & Libraries</h3>
@@ -122,7 +103,7 @@ const Skills = () => {
         </div>
 
         <div
-          className={`skill-category-wrapper observe ${visibleSections['essentials'] && typingDone ? 'show' : 'hide'}`}
+          className={`skill-category-wrapper observe ${visibleSections['essentials'] ? 'show' : 'hide'}`}
           id="essentials"
         >
           <h3 className="skill-heading">Other Essential Skills</h3>

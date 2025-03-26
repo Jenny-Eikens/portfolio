@@ -61,7 +61,7 @@ const Homepage = () => {
           </section>
         </main>
 
-        <footer className="bottom-1 mt-6 flex flex-col items-center p-2 text-sm md:bottom-0">
+        <footer className="mt-6 flex flex-col items-center p-2 text-sm">
           <h3 className="underline">Credits</h3>
           <div className="w-full p-2 text-left md:w-[65%] md:p-0">
             <a href="https://www.flaticon.com/icons" title="icons">
