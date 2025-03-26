@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Contact = () => {
   return (
@@ -12,7 +13,9 @@ const Contact = () => {
             rel="noreferrer noopener"
           >
             <div className="contact">
-              <img
+              <Image
+                width={40}
+                height={40}
                 src="/images/GitHub_Invertocat_Light.png"
                 alt="Github logo"
                 className="contact-image"
@@ -29,7 +32,9 @@ const Contact = () => {
             rel="noreferrer noopener"
           >
             <div className="contact">
-              <img
+              <Image
+                width={40}
+                height={40}
                 src="/images/frontend-mentor.svg"
                 alt="Frontend Mentor logo"
                 className="contact-image rounded-full bg-white p-2"
@@ -42,7 +47,9 @@ const Contact = () => {
         <div className="contact-container">
           <a href="mailto:jennifereikens@web.de" target="_blank">
             <div className="contact">
-              <img
+              <Image
+                width={40}
+                height={40}
                 src="/images/envelope-simple.svg"
                 alt="Email logo"
                 className="contact-image rounded-full bg-white p-2"

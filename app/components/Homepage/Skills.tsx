@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons'
 
@@ -47,19 +48,39 @@ const Skills = () => {
           <h4 className="skill-subheading">Core Technologies</h4>
           <ul className="skill-list">
             <li className="skill-name-wrapper">
-              <img src="/images/html.png" alt="HTML icon" />
+              <Image
+                src="/images/html.png"
+                width={40}
+                height={40}
+                alt="HTML icon"
+              />
               <span>HTML</span>
             </li>
             <li className="skill-name-wrapper">
-              <img src="/images/css-3.png" alt="CSS icon" />
+              <Image
+                src="/images/css-3.png"
+                width={40}
+                height={40}
+                alt="CSS icon"
+              />
               <span>CSS</span>
             </li>
             <li className="skill-name-wrapper">
-              <img src="/images/js.png" alt="JavaScript icon" />
+              <Image
+                width={40}
+                height={40}
+                src="/images/js.png"
+                alt="JavaScript icon"
+              />
               <span>JavaScript</span>
             </li>
             <li className="skill-name-wrapper">
-              <img src="/images/typescript.png" alt="TypeScript icon" />
+              <Image
+                width={40}
+                height={40}
+                src="/images/typescript.png"
+                alt="TypeScript icon"
+              />
               <span>TypeScript</span>
             </li>
           </ul>
@@ -73,7 +94,12 @@ const Skills = () => {
           <h4 className="skill-subheading">Styling & UI</h4>
           <ul className="skill-list">
             <li className="skill-name-wrapper">
-              <img src="/images/tailwind.png" alt="TailwindCSS icon" />
+              <Image
+                width={40}
+                height={40}
+                src="/images/tailwind.png"
+                alt="TailwindCSS icon"
+              />
               <span>TailwindCSS</span>
             </li>
             <li className="skill-name-wrapper">
@@ -81,18 +107,30 @@ const Skills = () => {
               <span>Bootstrap</span>
             </li>
             <li className="skill-name-wrapper">
-              <img src="/images/daisyui.png" alt="DaisyUI icon" />
+              <Image
+                width={40}
+                height={40}
+                src="/images/daisyui.png"
+                alt="DaisyUI icon"
+              />
               <span>DaisyUI</span>
             </li>
           </ul>
           <h4 className="skill-subheading mt-6">JavaScript Frameworks</h4>
           <ul className="skill-list">
             <li className="skill-name-wrapper">
-              <img src="/images/atom.png" alt="React icon" />
+              <Image
+                width={40}
+                height={40}
+                src="/images/atom.png"
+                alt="React icon"
+              />
               <span>React</span>
             </li>
             <li className="skill-name-wrapper">
-              <img
+              <Image
+                width={40}
+                height={40}
                 src="/images/next-js.svg"
                 alt="Next.js icon"
                 className="rounded-full border border-white bg-white"
@@ -110,7 +148,9 @@ const Skills = () => {
           <h4 className="skill-subheading">Web Development Concepts</h4>
           <ul className="skill-list">
             <li className="skill-name-wrapper">
-              <img
+              <Image
+                width={40}
+                height={40}
                 src="/images/responsive.png"
                 alt="Responsiveness icon"
                 className="dev-concept"
@@ -118,7 +158,9 @@ const Skills = () => {
               <span>Responsive Design</span>
             </li>
             <li className="skill-name-wrapper">
-              <img
+              <Image
+                width={40}
+                height={40}
                 src="/images/approval.png"
                 alt="Form validation icon"
                 className="dev-concept"
@@ -126,7 +168,9 @@ const Skills = () => {
               <span>Form Validation</span>
             </li>
             <li className="skill-name-wrapper">
-              <img
+              <Image
+                width={40}
+                height={40}
                 src="/images/accessibility.png"
                 alt="Accessibility icon"
                 className="dev-concept"
@@ -134,7 +178,9 @@ const Skills = () => {
               <span>Accessibility</span>
             </li>
             <li className="skill-name-wrapper">
-              <img
+              <Image
+                width={40}
+                height={40}
                 src="/images/cloud-api.png"
                 alt="API icon"
                 className="dev-concept"

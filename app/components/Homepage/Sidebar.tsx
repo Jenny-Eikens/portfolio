@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Sidebar = () => {
   return (
@@ -13,7 +14,12 @@ const Sidebar = () => {
             >
               <div className="social-container group">
                 <span className="social">Check out my Github profile!</span>
-                <img src="/images/github-mark.png" alt="Github logo" />
+                <Image
+                  width={40}
+                  height={40}
+                  src="/images/github-mark.png"
+                  alt="Github logo"
+                />
               </div>
             </a>
           </li>
@@ -27,7 +33,9 @@ const Sidebar = () => {
                 <span className="social">
                   Check out my Frontend Mentor profile!
                 </span>
-                <img
+                <Image
+                  width={40}
+                  height={40}
                   src="/images/frontend-mentor.svg"
                   alt="Frontend Mentor logo"
                   className="rounded-full bg-white p-2"
@@ -40,7 +48,9 @@ const Sidebar = () => {
               <div className="social-container group">
                 <span className="social">Send me an email!</span>
                 <div className="rounded-full bg-white">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src="/images/envelope-simple.svg"
                     alt="Email logo"
                     className="p-2"
