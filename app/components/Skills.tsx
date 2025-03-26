@@ -43,7 +43,7 @@ const Skills = () => {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .typeString('My skillset includes...')
+                .typeString('My skills include...')
                 .callFunction(() => setTypingDone(true))
                 .start()
             }}

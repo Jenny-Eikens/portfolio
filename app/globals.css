@@ -46,12 +46,18 @@ nav ul li {
 
 /* ------------------------------------------------------------------------------- */
 
-.social-container {
-  @apply relative flex items-center;
+.social {
+  @apply flex h-full max-w-0 flex-col justify-center overflow-hidden whitespace-nowrap text-background opacity-0 transition-all duration-500 group-hover:max-w-xs group-hover:overflow-visible group-hover:px-2 group-hover:opacity-100;
 }
 
-.social {
-  @apply absolute left-0 flex h-[40px] max-w-0 origin-right transform items-center overflow-hidden whitespace-nowrap rounded bg-primary px-2 py-1 text-sm text-black opacity-0 transition-all duration-1000 ease-in-out group-hover:w-auto group-hover:max-w-[450px] group-hover:-translate-x-full group-hover:opacity-100;
+@layer utilities {
+  .social-container {
+    @apply flex items-center rounded-full bg-primary p-1 transition-all duration-500 ease-out hover:w-full;
+  }
+
+  .social-container:hover {
+    transition-timing-function: ease-in;
+  }
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -146,6 +152,10 @@ nav ul li {
 
 .projects-list {
   @apply list-none space-y-2;
+}
+
+.list-heading {
+  @apply underline decoration-secondary;
 }
 
 /* ------------------------------------------------------------------------------- */

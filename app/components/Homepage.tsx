@@ -27,7 +27,10 @@ const Homepage = () => {
       <div
         className="h-auto min-h-screen overflow-x-hidden"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y + window.scrollY}px, rgba(255, 255, 255, 0.05), transparent 400px)`,
+          background:
+            typeof window !== 'undefined'
+              ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y + window.scrollY}px, rgba(255, 255, 255, 0.05), transparent 400px)`
+              : undefined,
         }}
       >
         <Header />

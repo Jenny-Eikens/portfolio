@@ -3,8 +3,8 @@ import React from 'react'
 const Sidebar = () => {
   return (
     <>
-      <div className="h-[80px] w-full px-4 py-4 md:fixed md:right-0 md:top-0 md:h-full md:w-[80px] md:py-0">
-        <ul className="flex w-full list-none flex-row items-center justify-center space-x-10 md:h-full md:w-auto md:flex-col md:space-x-0 md:space-y-10">
+      <div className="fixed right-0 top-0 z-[500] h-full pr-4">
+        <ul className="flex w-auto list-none flex-col items-end justify-center space-x-0 space-y-10 md:h-full">
           <li>
             <a
               href="https://github.com/Jenny-Eikens"
@@ -13,10 +13,7 @@ const Sidebar = () => {
             >
               <div className="social-container group">
                 <span className="social">Check out my Github profile!</span>
-                <img
-                  src="/images/GitHub_Invertocat_Light.png"
-                  alt="Github logo"
-                />
+                <img src="/images/github-mark.png" alt="Github logo" />
               </div>
             </a>
           </li>
