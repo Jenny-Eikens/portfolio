@@ -1,5 +1,5 @@
 import React from 'react'
-import Typewriter from 'typewriter-effect'
+import TypeIt from 'typeit-react'
 
 const Start = () => {
   return (
@@ -13,13 +13,13 @@ const Start = () => {
         <code>&lt;/&gt;</code>
       </div>
       <h2 className="text-[3rem] font-bold leading-[3rem] md:text-[4rem]">
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter.typeString('Frontend Developer').start()
-          }}
+        <TypeIt
           options={{
-            autoStart: true,
+            strings: ['Frontend Developer'],
+            speed: 100,
             loop: false,
+            cursor: true,
+            waitUntilVisible: true,
           }}
         />
       </h2>
