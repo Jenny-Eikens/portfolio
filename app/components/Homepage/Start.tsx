@@ -6,7 +6,7 @@ const Start = () => {
     <>
       <div className="text-center md:mb-6 md:text-left">
         <code>&lt;&gt;</code>
-        <h1 className="inline text-clip bg-gradient-heading bg-clip-text text-[5rem] font-bold leading-[5.5rem] text-transparent md:text-[8rem] md:leading-[7rem]">
+        <h1 className="inline text-clip bg-gradient-heading bg-clip-text text-[5rem] font-bold leading-[5rem] text-transparent md:text-[8rem] md:leading-[7rem]">
           Jennifer <br />
           Eikens
         </h1>
