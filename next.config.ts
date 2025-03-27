@@ -1,12 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: false,
-
-  experimental: {
-    turbo: {
-      enabled: false,
-    },
-  },
+  experimental: {},
 }
 
 module.exports = nextConfig
