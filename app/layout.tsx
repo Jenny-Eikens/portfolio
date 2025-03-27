@@ -1,4 +1,4 @@
-import '../global.css'
+import './global.css'
 import ClientWrapper from './components/ClientWrapper'
 
 export const metadata = {
