@@ -19,7 +19,7 @@ const Start = () => {
             speed: 100,
             loop: false,
             cursor: true,
-            waitUntilVisible: true,
+            waitUntilVisible: false,
           }}
         />
       </h2>
