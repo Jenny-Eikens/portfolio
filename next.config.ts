@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {},
-
+  reactStrictMode: true,
   headers: async () => [
     {
       source: '/_next/static/:path*',
