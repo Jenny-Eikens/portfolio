@@ -31,7 +31,7 @@ const Projects = () => {
                 </li>
                 <li>
                   <span className="list-heading">Skills showcased</span>:
-                  responsive design, accessibility
+                  responsive design, accessibility, custom validation
                 </li>
               </ul>
             </div>
@@ -61,7 +61,7 @@ const Projects = () => {
                 </li>
                 <li>
                   <span className="list-heading">Skills showcased</span>:
-                  responsive design, accessibility
+                  responsive design, APIs
                 </li>
               </ul>
             </div>
@@ -92,7 +92,7 @@ const Projects = () => {
                 </li>
                 <li>
                   <span className="list-heading">Skills showcased</span>:
-                  responsive design, accessibility
+                  responsive layout, accessibility
                 </li>
               </ul>
             </div>
@@ -116,11 +116,11 @@ const Projects = () => {
                 </li>
                 <li>
                   <span className="list-heading">Features</span>: filtering,
-                  drag-and-drop, dark mode
+                  drag-and-drop, dark mode, local storage
                 </li>
                 <li>
                   <span className="list-heading">Skills showcased</span>:
-                  responsive design, accessibility
+                  accessibility
                 </li>
               </ul>
             </div>
@@ -172,11 +172,11 @@ const Projects = () => {
                 <li>
                   <span className="list-heading">Features</span>: functionality
                   for editing/deleting/adding comments, replying to comments,
-                  dark mode
+                  dark mode, local storage
                 </li>
                 <li>
                   <span className="list-heading">Skills showcased</span>:
-                  responsive design, accessibility
+                  recursion, responsive design, accessibility
                 </li>
               </ul>
             </div>
