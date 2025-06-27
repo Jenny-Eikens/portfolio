@@ -1,0 +1,50 @@
+[
+  {
+    "href": "https://jenny-eikens.github.io/contact-form/",
+    "title": "Contact Form",
+    "src": "/images/contact-form.png",
+    "framework": "React",
+    "features:": "form validation",
+    "skills": "responsive design, accessibility, custom validation"
+  },
+  {
+    "href": "https://ip-address-tracker-three-kohl.vercel.app/",
+    "title": "IP Address Tracker",
+    "src": "/images/ip-tracker.png",
+    "framework": "Next",
+    "features:": "APIs",
+    "skills": "responsive design, APIs"
+  },
+  {
+    "href": "https://jenny-eikens.github.io/e-commerce-page/",
+    "title": "E-Commerce Product Page",
+    "src": "/images/e-commerce.png",
+    "framework": "React",
+    "features:": "image gallery, shopping cart functionality",
+    "skills": "responsive layout, accessibility"
+  },
+  {
+    "href": "https://todo-app-gray-nine-49.vercel.app/",
+    "title": "Todo App",
+    "src": "/images/todo-app.png",
+    "framework": "Next",
+    "features:": "filtering, drag-and-drop, dark mode, local storage",
+    "skills": "accessibility"
+  },
+  {
+    "href": "https://job-listings-iota-peach.vercel.app/",
+    "title": "Job Listings",
+    "src": "/images/job-listings.png",
+    "framework": "Next",
+    "features:": "filtering",
+    "skills": "responsive design, accessibility"
+  },
+  {
+    "href": "https://comment-section-kohl.vercel.app/",
+    "title": "Interactive Comment Section",
+    "src": "/images/comment-section.png",
+    "framework": "Next",
+    "features:": "functionality for editing/deleting/adding comments, replying to comments, dark mode, local storage",
+    "skills": "recursion, responsive design, accessibility"
+  }
+]

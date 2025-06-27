@@ -1,44 +1,59 @@
 import React from 'react'
+import { fetchProjects } from '@/lib/fetchProjects'
 
-const Projects = () => {
+export type ProjectType = {
+  href: string
+  title: string
+  src: string
+  framework: string
+  features: string
+  skills: string
+}
+
+const Projects = async () => {
+  const projects: ProjectType[] = await fetchProjects()
+
+  if (!projects) {
+    console.error('Missing required data:', { projects })
+    return <div>Error loading data</div>
+  }
+
   return (
     <>
       <h2 className="mb-6 pt-2 text-center text-3xl md:mb-10">
         Here&apos;s a look at some of my projects so far:
       </h2>
       <div className="projects-wrapper w-full space-y-2 md:space-y-0">
-        <div className="project-wrapper group">
-          <a
-            href="https://jenny-eikens.github.io/contact-form/"
-            target="_blank"
-          >
-            <div className="preview-card">
-              <h3 className="preview-title group-hover:text-secondary">
-                Contact Form
-              </h3>
-              <img
-                src="/images/contact-form.png"
-                alt=""
-                className="preview-image aspect-video"
-              />
-              <ul className="projects-list">
-                <li>
-                  <span className="list-heading">Framework</span>: React
-                </li>
-                <li>
-                  <span className="list-heading">Features</span>: form
-                  validation
-                </li>
-                <li>
-                  <span className="list-heading">Skills showcased</span>:
-                  responsive design, accessibility, custom validation
-                </li>
-              </ul>
-            </div>
-          </a>
-        </div>
+        {projects.map(({ href, title, src, framework, features, skills }) => (
+          <div key={href} id={href} className="project-wrapper group">
+            <a href={href} target="_blank">
+              <div className="preview-card">
+                <h3 className="preview-title group-hover:text-secondary">
+                  {title}
+                </h3>
+                <img
+                  src={src}
+                  alt={`Preview image of ${title}`}
+                  className="preview-image aspect-video"
+                />
+                <ul className="projects-list">
+                  <li>
+                    <span className="list-heading">Framework</span>: {framework}
+                  </li>
+                  <li>
+                    <span className="list-heading">Features</span>: {features}
+                  </li>
+                  <li>
+                    <span className="list-heading">Skills showcased</span>:
+                    {skills}
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        ))}
 
-        <div className="project-wrapper group">
+        {/* <div className="project-wrapper group">
           <a
             href="https://ip-address-tracker-three-kohl.vercel.app/"
             target="_blank"
@@ -181,10 +196,19 @@ const Projects = () => {
               </ul>
             </div>
           </a>
-        </div>
+        </div> */}
       </div>
     </>
   )
 }
 
 export default Projects
+
+// {
+//         "href": ,
+//         "title": "Band Homepage",
+//         "src": ,
+//         "framework": "Next",
+//         "features:": "contact form, image carousel, skip linnks",
+//         "skills": "custom validation, accessibility"
+//     },
