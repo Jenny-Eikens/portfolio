@@ -187,6 +187,16 @@ const Skills = () => {
               />
               <span>APIs</span>
             </li>
+            <li className="skill-name-wrapper">
+              <Image
+                width={40}
+                height={40}
+                src="/images/cms.png"
+                alt="CMS icon"
+                className="dev-concept"
+              />
+              <span>Headless CMS</span>
+            </li>
           </ul>
         </div>
       </div>

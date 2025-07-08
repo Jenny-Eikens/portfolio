@@ -6,8 +6,9 @@ import Skills from './Skills'
 import Projects from './Projects'
 import Contact from './Contact'
 import Start from './Start'
+import type { ProjectsProps } from '@/types/projects'
 
-const Homepage = () => {
+const Homepage = ({ projects }: ProjectsProps) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
@@ -52,7 +53,7 @@ const Homepage = () => {
           </section>
 
           <section className="min-h-screen" id="projects">
-            <Projects />
+            <Projects projects={projects} />
             <hr />
           </section>
 
@@ -97,6 +98,10 @@ const Homepage = () => {
             <span> | </span>
             <a href="https://www.flaticon.com/free-icons/api" title="api icons">
               Api icons created by Candy Design - Flaticon
+            </a>
+            <span> | </span>
+            <a href="https://www.flaticon.com/free-icons/cms" title="cms icons">
+              Cms icons created by juicy_fish - Flaticon
             </a>
           </div>
         </footer>

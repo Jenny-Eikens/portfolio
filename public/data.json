@@ -4,7 +4,7 @@
     "title": "Contact Form",
     "src": "/images/contact-form.png",
     "framework": "React",
-    "features:": "form validation",
+    "features": "form validation",
     "skills": "responsive design, accessibility, custom validation"
   },
   {
@@ -12,7 +12,7 @@
     "title": "IP Address Tracker",
     "src": "/images/ip-tracker.png",
     "framework": "Next",
-    "features:": "APIs",
+    "features": "APIs",
     "skills": "responsive design, APIs"
   },
   {
@@ -20,7 +20,7 @@
     "title": "E-Commerce Product Page",
     "src": "/images/e-commerce.png",
     "framework": "React",
-    "features:": "image gallery, shopping cart functionality",
+    "features": "image gallery, shopping cart functionality",
     "skills": "responsive layout, accessibility"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Todo App",
     "src": "/images/todo-app.png",
     "framework": "Next",
-    "features:": "filtering, drag-and-drop, dark mode, local storage",
+    "features": "filtering, drag-and-drop, dark mode, local storage",
     "skills": "accessibility"
   },
   {
@@ -36,7 +36,7 @@
     "title": "Job Listings",
     "src": "/images/job-listings.png",
     "framework": "Next",
-    "features:": "filtering",
+    "features": "filtering",
     "skills": "responsive design, accessibility"
   },
   {
@@ -44,7 +44,7 @@
     "title": "Interactive Comment Section",
     "src": "/images/comment-section.png",
     "framework": "Next",
-    "features:": "functionality for editing/deleting/adding comments, replying to comments, dark mode, local storage",
+    "features": "functionality for editing/deleting/adding comments, replying to comments, dark mode, local storage",
     "skills": "recursion, responsive design, accessibility"
   }
 ]
