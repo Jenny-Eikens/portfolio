@@ -21,8 +21,8 @@ I am a self-taught developer with a passion for building clean, responsive websi
 
 ### Links
 
-- Solution URL: [Github repository]()
-- Live Site URL: [Live site]()
+- Solution URL: [Github repository](https://github.com/Jenny-Eikens/portfolio)
+- Live Site URL: [Live site](https://www.jennifereikens.com/)
 
 ### Built with
 
