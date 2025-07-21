@@ -47,12 +47,3 @@ const Projects = ({ projects }: ProjectsProps) => {
 }
 
 export default Projects
-
-// {
-//         "href": ,
-//         "title": "Band Homepage",
-//         "src": ,
-//         "framework": "Next",
-//         "features:": "contact form, image carousel, skip linnks",
-//         "skills": "custom validation, accessibility"
-//     },

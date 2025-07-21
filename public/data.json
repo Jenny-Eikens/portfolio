@@ -1,5 +1,13 @@
 [
   {
+    "href": "https://www.hammerhai.net/",
+    "title": "Band Homepage",
+    "src": "/images/hammerhai.png",
+    "framework": "Next",
+    "features": "contact form, image carousel, skip links",
+    "skills": "custom validation, accessibility"
+  },
+  {
     "href": "https://jenny-eikens.github.io/contact-form/",
     "title": "Contact Form",
     "src": "/images/contact-form.png",
