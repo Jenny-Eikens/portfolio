@@ -5,7 +5,7 @@ import Header from './Header'
 import Skills from './Skills'
 import Projects from './Projects'
 import Contact from './Contact'
-import Start from './Start'
+import Hero from './Hero'
 import type { ProjectsProps } from '@/types/projects'
 
 const Homepage = ({ projects }: ProjectsProps) => {
@@ -40,7 +40,7 @@ const Homepage = ({ projects }: ProjectsProps) => {
         </div>
         <main className="m-auto w-[90vw] max-w-[1200px] space-y-10 text-2xl md:pr-20">
           <section className="flex h-screen flex-col items-start justify-center md:pl-[4rem]">
-            <Start />
+            <Hero />
           </section>
           <hr className="w-full" />
 

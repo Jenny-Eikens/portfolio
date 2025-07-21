@@ -1,7 +1,7 @@
 import React from 'react'
 import TypeIt from 'typeit-react'
 
-const Start = () => {
+const Hero = () => {
   return (
     <>
       <div className="text-center md:mb-6 md:text-left">
@@ -27,4 +27,4 @@ const Start = () => {
   )
 }
 
-export default Start
+export default Hero
