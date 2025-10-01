@@ -3,9 +3,33 @@
     "href": "https://www.hammerhai.net/",
     "title": "Band Homepage",
     "src": "/images/hammerhai.png",
-    "framework": "Next",
+    "framework": "Next.js",
     "features": "contact form, image carousel, skip links",
     "skills": "custom validation, accessibility"
+  },
+  {
+    "href": "https://comment-section-kohl.vercel.app/",
+    "title": "Interactive Comment Section",
+    "src": "/images/comment-section.png",
+    "framework": "Next.js",
+    "features": "functionality for editing/deleting/adding comments, replying to comments, dark mode, local storage",
+    "skills": "recursion, responsive design, accessibility"
+  },
+  {
+    "href": "https://sudoku-six-ashy.vercel.app/",
+    "title": "Sudoku",
+    "src": "/images/sudoku.png",
+    "framework": "Next.js",
+    "features": "choice of two sizes and three difficulties, option to reset board, option to reveal solution, success message",
+    "skills": "backtracking, constraint checking, randomized cell removal, clue preservation tracking"
+  },
+  {
+    "href": "https://todo-app-gray-nine-49.vercel.app/",
+    "title": "Todo App",
+    "src": "/images/todo-app.png",
+    "framework": "Next.js",
+    "features": "filtering, drag-and-drop, dark mode, local storage",
+    "skills": "accessibility"
   },
   {
     "href": "https://jenny-eikens.github.io/contact-form/",
@@ -19,7 +43,7 @@
     "href": "https://ip-address-tracker-three-kohl.vercel.app/",
     "title": "IP Address Tracker",
     "src": "/images/ip-tracker.png",
-    "framework": "Next",
+    "framework": "Next.js",
     "features": "APIs",
     "skills": "responsive design, APIs"
   },
@@ -32,27 +56,11 @@
     "skills": "responsive layout, accessibility"
   },
   {
-    "href": "https://todo-app-gray-nine-49.vercel.app/",
-    "title": "Todo App",
-    "src": "/images/todo-app.png",
-    "framework": "Next",
-    "features": "filtering, drag-and-drop, dark mode, local storage",
-    "skills": "accessibility"
-  },
-  {
     "href": "https://job-listings-iota-peach.vercel.app/",
     "title": "Job Listings",
     "src": "/images/job-listings.png",
-    "framework": "Next",
+    "framework": "Next.js",
     "features": "filtering",
     "skills": "responsive design, accessibility"
-  },
-  {
-    "href": "https://comment-section-kohl.vercel.app/",
-    "title": "Interactive Comment Section",
-    "src": "/images/comment-section.png",
-    "framework": "Next",
-    "features": "functionality for editing/deleting/adding comments, replying to comments, dark mode, local storage",
-    "skills": "recursion, responsive design, accessibility"
   }
 ]
